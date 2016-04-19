@@ -84,7 +84,7 @@ class Page_1 extends PageContent{
                                         "post",
                                         '17 Apr 2016',
                                         'Danilo',
-                                        'https://github.com/DaniloBabovic'
+                                        'https://github.com/DaniloBabovic/SiteGenJS'
                                     )
         post.addText('Hello world!')
         post.addText('<br><br>Code for this component is presented in post below.')
@@ -98,17 +98,17 @@ class Page_1 extends PageContent{
                                         "post",
                                         '17 Apr 2016',
                                         'Danilo',
-                                        'https://github.com/DaniloBabovic'
+                                        'https://github.com/DaniloBabovic/SiteGenJS'
                                     )
 
         var code = new Code('js')
         let code_txt = `    var post = this.page.makePost()
-    post.setTitle("2. Post example", 'https://github.com/DaniloBabovic')
+    post.setTitle("2. Post example", 'https://github.com/DaniloBabovic/SiteGenJS')
     post.setPostInfo(
                         "post",
                         '17 Apr 2016',
                         'Danilo',
-                        'https://github.com/DaniloBabovic'
+                        'https://github.com/DaniloBabovic/SiteGenJS'
                     )
     post.addText('Hello world!')
     post.addText('<br><br>Code for this component is presented in post below.')`
@@ -158,7 +158,7 @@ class Page_1 extends PageContent{
                                         "Post base",
                                         '17 Apr 2016',
                                         'Danilo',
-                                        'https://github.com/DaniloBabovic'
+                                        'https://github.com/DaniloBabovic/SiteGenJS'
                                     )
 
         var code = new Code('js')

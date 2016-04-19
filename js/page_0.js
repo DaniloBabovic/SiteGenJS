@@ -103,7 +103,7 @@ class Page_0 extends PageContent{
                                         "Javascript",
                                         '17 Apr 2016',
                                         'Danilo',
-                                        'https://github.com/DaniloBabovic'
+                                        'https://github.com/DaniloBabovic/SiteGenJS'
                                     )
 
         let t = new TextBuilder()
@@ -140,7 +140,7 @@ fancyComponent()`
                             "Method",
                             '17 Apr 2016',
                             'Danilo',
-                            'https://github.com/DaniloBabovic'
+                            'https://github.com/DaniloBabovic/SiteGenJS'
                         )
 
         post.addText('Metod description example from code above:')
@@ -182,15 +182,19 @@ fancyComponent()`
         let {t, l, c, nl, div, para} = tb.allMethods()
 
         t('All content in this page are saved in')
-        c("main.js")
-        t('file.')
-        t('There is no need for css, html or any markup language.')
+        c("main.js"); t('and'); c("page_0.js");
+        t('files.')
+        t('There is no need for css, html or any markup language. Existing css is great, take care about your content.')
         nl()
         t('No: database, npm, Angular, JQuery, node.js, Babel, Browserify, Promise, back end ...')
+        t('All components gets data dynamicaly and self inject as ')
+        c('&lt;section&gt;...&lt;/section&gt;')
+        t('into page body element using client processor.'); nl()
+        t('With basic ECMAScript 6 knowledge, there is no learning curve.')
         nl()
-        t('With basic JS knowledge, there is no learning curve.')
+        t('However, you can write HTML instead text if you like or use all those libs.')
         nl()
-        t('However, you can write HTML instead text if you like. All content are dinamicaly injected as body child element.')
+        t('Our intention is to give you a choice NOT to use it, to make your site less dependable.')
         post.addText(para())
     }
 
@@ -213,13 +217,13 @@ fancyComponent()`
 
         t('... and more.')
         nl()
-        l("SiteGenJS", "https://github.com/DaniloBabovic")
+        l("SiteGenJS", "https://github.com/DaniloBabovic/SiteGenJS")
         t('is open and')
         l('MIT.', 'https://opensource.org/licenses/MIT')
         t('You can write your components and share if you like.')
         nl()
         t('For start, you can')
-        l("download", "https://github.com/DaniloBabovic")
+        l("download", "https://github.com/DaniloBabovic/SiteGenJS")
         t('and replace content of this page with your content.')
         post.addText(para())
     }
