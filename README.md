@@ -1,3 +1,10 @@
+Under construction :) 
+======================
+
+Testing
+===========
+
+
 Site Gen JS
 ===========
 
@@ -5,8 +12,6 @@ Site Gen JS
 
 ![alt tag](https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/img/site_gen_shot.png)
 
-
-[Live demo:] (http://htmlpreview.github.io/?https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/index.html)
 
 #### Edit anywhere ####
 
