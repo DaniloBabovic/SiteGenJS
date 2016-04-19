@@ -5,6 +5,9 @@ Site Gen JS
 
 ![alt tag](https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/img/site_gen_shot.png)
 
+
+[Live demo:] (http://htmlpreview.github.io/?https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/index.html)
+
 #### Edit anywhere ####
 
 Browser and text editor are all that you need to create site.
@@ -26,5 +29,7 @@ No: database, npm, Angular, JQuery, node.js, Babel, Browserify, Promise, back en
 With basic ECMAScript 6 knowledge, there is no learning curve.
 However, you can write HTML instead text if you like or use all those libs.
 Our intention is to give you a choice NOT to use it, to make your site less dependable.
+
+
 
 Happy coding!
