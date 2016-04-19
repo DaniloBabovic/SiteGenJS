@@ -3,16 +3,16 @@ Site Gen JS
 
 #### Static site generator ####
 
-## Edit anywhere ##
+#### Edit anywhere ####
 
 Browser and text editor are all that you need to create site like this
 
-## Run anywhere ##
+#### Run anywhere ####
 
 No server needed!
 You can run this site from file or form any Web server.
 
-## Save anywhere ##
+#### Save anywhere ####
 
 Paths are relative.
 You can save and run index.html from flash drive, phone or tablet storage.
