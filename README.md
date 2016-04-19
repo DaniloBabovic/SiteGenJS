@@ -1,0 +1,2 @@
+# SiteGenJS
+Static site generator
