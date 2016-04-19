@@ -3,6 +3,9 @@ Site Gen JS
 
 #### Static site generator ####
 
+
+![alt tag](https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/img/site_gen_shot.png)
+
 #### Edit anywhere ####
 
 Browser and text editor are all that you need to create site like this
