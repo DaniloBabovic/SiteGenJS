@@ -4,7 +4,7 @@ class Header {
 
         this.pages = siteGen.pageNames
         this.siteGen = siteGen
-        this.bodyElement = siteGen.bodyElement
+        this.headerDiv = siteGen.headerDiv
         this.siteName = siteName
         document.title = siteName
 
@@ -76,8 +76,22 @@ class Header {
 
     onPageClick(pageName)
     {
-        //do something extra
-        //alert(pageName)
+        siteGen.pageChanged(pageName)
+    }
+
+    updateSelected(newPageIndex) {
+
+        let oldIndex = this.currentPageIndex
+        let oldID = "header_link_" + oldIndex
+
+        this.currentPageIndex = newPageIndex
+        let newID = "header_link_" + newPageIndex
+
+        let ulElementOld = document.getElementById(oldID)
+        let ulElementNew = document.getElementById(newID)
+
+        ulElementOld.setAttribute("class", "notCurrent");
+        ulElementNew.setAttribute("class", "current");
     }
 
     insert() {
@@ -91,7 +105,7 @@ class Header {
         this.header.style["background-image"] = this.backgroundImage
 
         this.header.innerHTML = this.html
-        this.bodyElement.appendChild(this.header);
+        this.headerDiv.appendChild(this.header);
 
         this.loadLogo()
 
@@ -99,17 +113,19 @@ class Header {
         function insertPage(ul, pageName, index, onClick, filename)
         {
             var li  = document.createElement("li");
-            let href = filename + '?page=' + index
+            //let href = filename + '?page=' + index
+            let href = ''
+            let linkID = ' id = "header_link_' + index + '" '
             if (index == siteGen.currentPageIndex) {
 
-                li.innerHTML = `<li class="current">
-                    <a href=` + href + `>` + pageName + `</a>
+                li.innerHTML = `<li ` + linkID + ` class="current">
+                    <a >` + pageName + `</a>
                     </li>`
             }
             else {
 
-                li.innerHTML = `<li class="">
-                    <a href=` + href + `>` + pageName + `</a>
+                li.innerHTML = `<li ` + linkID + ` class="">
+                    <a >` + pageName + `</a>
                     </li>`
             }
             li.onclick = () => (onClick(pageName))
@@ -127,5 +143,6 @@ class Header {
                             this.siteGen.filename
                         )
         }
+        this.currentPageIndex = siteGen.currentPageIndex
     }
 }

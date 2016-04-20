@@ -2,8 +2,9 @@ class SiteGen {
 
     constructor(pageNames) {
 
-        this.bodyElement = document.getElementsByTagName("BODY")[0];
-        this.bodyElement.style["border-top"] = '0px solid #fc0'
+        this.headerDiv = document.getElementById("header_div");
+        this.pageDiv = document.getElementById("page_div");
+        this.bottomDiv = document.getElementById("bottom_div");
 
         this.pageNames = pageNames
         this.pages = []
@@ -104,5 +105,24 @@ class SiteGen {
                 show(this.header, this.currentPage, this.footer)
             }
         }
+    }
+
+    pageChanged(pageName) {
+
+        for (let i = 0; i < this.pageNames.length; i++)
+        {
+            if (pageName == this.pageNames[i])
+            {
+                this.pageDiv.innerHTML = ''
+                this.currentPageIndex = i
+                this.currentPage = this.pages[i]
+                this.currentPage.insert()
+
+                break
+            }
+        }
+
+        this.header.updateSelected(this.currentPageIndex)
+        this.footer.updateSelected(this.currentPageIndex)
     }
 }

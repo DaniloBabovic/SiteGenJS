@@ -11,7 +11,7 @@ class PostBase {
 
         this.page = page
         this.siteGen = page.siteGen
-        this.bodyElement = this.siteGen.bodyElement
+        this.pageDiv = this.siteGen.pageDiv
         this.texts = []
     }
 
@@ -29,7 +29,7 @@ class PostBase {
         }
 
         this.element = htmlToElement('<section>' + this.html + '</section>')
-        this.bodyElement.appendChild(this.element)
+        this.pageDiv.appendChild(this.element)
     }
 }
 
@@ -102,7 +102,7 @@ class Post extends PostBase {
 
         this.createPostBody()
         this.element = htmlToElement(this.html)
-        this.bodyElement.appendChild(this.element)
+        this.pageDiv.appendChild(this.element)
     }
 }
 
@@ -114,7 +114,7 @@ class PostSimple {
         this.marginTop = marginTop
         this.page = page
         this.siteGen = page.siteGen
-        this.bodyElement = this.siteGen.bodyElement
+        this.pageDiv = this.siteGen.pageDiv
         this.texts = []
     }
 
@@ -153,7 +153,7 @@ class PostSimple {
 
         this.createPostBody()
         this.element = htmlToElement(this.html)
-        this.bodyElement.appendChild(this.element)
+        this.pageDiv.appendChild(this.element)
     }
 }
 
@@ -167,7 +167,7 @@ class PostThreeColums {
 
         this.page = page
         this.siteGen = page.siteGen
-        this.bodyElement = this.siteGen.bodyElement
+        this.pageDiv = this.siteGen.pageDiv
 
         this.titleOne = titleOne
         this.titleTwo = titleTwo
@@ -238,6 +238,6 @@ class PostThreeColums {
 
         this.createPostBody()
         this.element = htmlToElement(this.html)
-        this.bodyElement.appendChild(this.element)
+        this.pageDiv.appendChild(this.element)
     }
 }

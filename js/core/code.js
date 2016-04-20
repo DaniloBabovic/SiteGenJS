@@ -7,7 +7,7 @@ class PostFancyCode {
         this.titleText = titleText
         this.formTitle = formTitle
         this.siteGen = page.siteGen
-        this.bodyElement = this.siteGen.bodyElement
+        this.pageDiv = this.siteGen.pageDiv
         this.texts = []
     }
 
@@ -58,7 +58,7 @@ class PostFancyCode {
 
         this.createPostBody()
         this.element = htmlToElement(this.html)
-        this.bodyElement.appendChild(this.element)
+        this.pageDiv.appendChild(this.element)
     }
 }
 
@@ -70,8 +70,24 @@ class Code {
         this.texts = []
     }
 
+    add_(codeText_) {
+
+        this.texts.push(codeText_)
+    }
+
     add(codeText) {
-        this.texts.push(codeText)
+
+        var fun_ = (codeText_) => (this.add_(codeText_))
+        Rainbow.color(
+                        codeText,
+                        'javascript',
+                        function(highlighted_code)
+                        {
+                            fun_(highlighted_code)
+                            //console.log(highlighted_code);
+                        }
+                    );
+        //this.texts.push(codeText)
     }
 
     getText() {

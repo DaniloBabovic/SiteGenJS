@@ -21,6 +21,6 @@ class TitleBig
         </section>`
 
         this.element = htmlToElement(text)
-        this.siteGen.bodyElement.appendChild(this.element)
+        this.siteGen.pageDiv.appendChild(this.element)
     }
 }

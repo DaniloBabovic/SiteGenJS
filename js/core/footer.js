@@ -4,7 +4,7 @@ class Footer {
 
         this.pages = siteGen.pageNames
         this.siteGen = siteGen
-        this.bodyElement = siteGen.bodyElement
+        this.bottomDiv = siteGen.bottomDiv
         this.backgroundColor = '#222222'
 
         this.siteName = siteGen.header.siteName
@@ -85,7 +85,22 @@ class Footer {
 
     onPageClick(pageName)
     {
-        //alert(" yo " + pageName)
+        siteGen.pageChanged(pageName)
+    }
+
+    updateSelected(newPageIndex) {
+
+        let oldIndex = this.currentPageIndex
+        let oldID = "footer_link_" + oldIndex
+
+        this.currentPageIndex = newPageIndex
+        let newID = "footer_link_" + newPageIndex
+
+        let ulElementOld = document.getElementById(oldID)
+        let ulElementNew = document.getElementById(newID)
+
+        ulElementOld.setAttribute("class", "notCurrent");
+        ulElementNew.setAttribute("class", "current");
     }
 
     insert() {
@@ -95,13 +110,10 @@ class Footer {
         this.footer.setAttribute("role", "banner");
         this.footer.style["width"] = '100%'
 
-         this.footer.style["background-color"] = this.backgroundColor
-        //this.footer.style["background-image"] = 'url("img/carbon_fibre.png")'
-        //this.footer.style["background-image"] = 'url("img/large-leather.png")'
-        //this.footer.style["background-repeat"] = "repeat-xy"
+        this.footer.style["background-color"] = this.backgroundColor
 
         this.footer.innerHTML = this.html
-        this.bodyElement.appendChild(this.footer);
+        this.bottomDiv.appendChild(this.footer);
 
         this.loadLogo()
 
@@ -109,17 +121,20 @@ class Footer {
         function insertPage(ul, pageName, index, onClick, filename)
         {
             var li  = document.createElement("li");
-            let href = filename + '?page=' + index
+            //let href = filename + '?page=' + index
+            let href = ''
+            let linkID = ' id = "footer_link_' + index + '" '
+
             if (index == siteGen.currentPageIndex) {
 
-                li.innerHTML = `<li class="current">
-                    <a href=` + href + `>` + pageName + `</a>
+                li.innerHTML = `<li  ` + linkID + ` class="current">
+                    <a>` + pageName + `</a>
                     </li>`
             }
             else {
 
-                li.innerHTML = `<li class="">
-                    <a href=` + href + `>` + pageName + `</a>
+                li.innerHTML = `<li  ` + linkID + ` class="">
+                    <a>` + pageName + `</a>
                     </li>`
             }
             li.onclick = () => (onClick(pageName))
@@ -137,5 +152,7 @@ class Footer {
                             this.siteGen.filename
                         )
         }
+        this.currentPageIndex = siteGen.currentPageIndex
+        Rainbow.color();
     }
 }
