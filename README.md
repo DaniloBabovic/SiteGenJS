@@ -27,7 +27,7 @@ You can save and run index.html from flash drive, phone or tablet storage.
 #### Live Web site ####
 
 * [Site generator JS](https://sitegeneratorjs.appspot.com) hosted on Google Application engine
-
+* [Site generator JS](https://htmlpreview.github.com/?https://raw.githubusercontent.com/DaniloBabovic/SiteGenJS/master/index.html) hosted on GitHub
 
 #### Only JS ####
 
