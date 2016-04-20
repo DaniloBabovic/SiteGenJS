@@ -8,16 +8,16 @@ Site Gen JS
 
 #### Edit anywhere ####
 
-A browser and a text editor are all that you need to create a site.
+* A browser and a text editor are all that you need to create a site.
 
 #### Run anywhere ####
 
-No server needed!
+ * No server needed!
 You can run this site from file or from any Web server.
 
 #### Save anywhere ####
 
-Paths are relative.
+* Paths are relative.
 You can save and run index.html from flash drive, phone or tablet storage.
 
 #### Example ####
@@ -26,7 +26,7 @@ You can save and run index.html from flash drive, phone or tablet storage.
 
 #### Live Web site ####
 
-* [Site generator JS](https:/sitegeneratorjs.appspot.com) hosted on Google Application engine
+* [Site generator JS](https://sitegeneratorjs.appspot.com) hosted on Google Application engine
 
 
 #### Only JS ####
