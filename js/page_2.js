@@ -11,15 +11,15 @@ class Page_2 extends PageContent{
 
         let post = this.page.makePostSimple('Reasons:', 40)
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
-        
+
         t('With ECMAScript 6 it is possible.'); nl()
-        t('ECMAScript 6 reduce code footprint seriously. Now we can realy see page text content in the code.');nl();nl()
+        t('ECMAScript 6 reduces code footprint seriously. Now we can really see page text content in the code.');nl();nl()
         t('Main reasons:'); nl()
         t(`When I need to write documentation, I don't want to waste time for tools setup.`); nl()
         post.addText(para())
 
         let note = new Note('info', 'Off line')
-        note.para('I want to read documentation in offline enviroments.')
+        note.para('I want to read documentation in offline environments.')
         post.addText(note.getText())
         let noteTip = new Note('tip', 'Less code')
         noteTip.para('This page has less then 30 lines of code including content.')

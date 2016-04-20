@@ -16,7 +16,7 @@ class Page_3 extends PageContent{
 
         l('GitHub', 'https://github.com/DaniloBabovic/SiteGenJS')
         t('is the main download place.'); nl()
-        t('Feel free to send me few thoughts: sitegenjs@gmail.com')
+        t('Feel free to send me a few thoughts: sitegenjs@gmail.com')
         stye_post.addText(para())
     }
 }

@@ -3,7 +3,7 @@ class Page_1 extends PageContent{
     constructor(siteGen) {
 
         super(siteGen)
-        this.page.makeTitle("Example to code manual", 'rgba(120, 0, 0, 1)')
+        this.page.makeTitle("Post to code manual", 'rgba(120, 0, 0, 1)')
 
         this.post_0()
         this.post_0_explain()
@@ -19,14 +19,14 @@ class Page_1 extends PageContent{
 
     post_0() {
 
-        let post = this.page.makePostSimple('1. Post simple example', 40)
+        let post = this.page.makePostSimple('1. Post simple', 40)
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
 
         t('This post is created by')
         c('PostSimple()')
         t('class.')
         nl()
-        t('Code for this component is presented in post below.')
+        t('Code for this component is presented in the post below.')
         post.addText(para())
     }
 
@@ -44,13 +44,13 @@ class Page_1 extends PageContent{
         var code = new Code('js')
         let code_txt = `    let post = this.page.makePostSimple('Post simple example', 40)
     let tb = new TextBuilder()
-    //Common metods for TextBuilder() class
+    //Common methods for TextBuilder() class
     let {t, l, c, nl, div, para} = tb.allMethods()
     t('This post is created by')
     c('PostSimple()')
     t('class.')
     nl()
-    t('Code for this component is presented in post below.')
+    t('Code for this component is presented in the post below.')
     post.addText(para())`
 
         code.add(code_txt)
@@ -59,15 +59,15 @@ class Page_1 extends PageContent{
 
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
 
-        t('First line is for title and top margin.'); nl()
+        t('The first line is for the title and top margin.'); nl()
         c('let tb = new TextBuilder()')
-        t('TextBuilder purpose is used to transform text into html '); nl()
+        t('The purpose of TextBuilder is to transform text into html '); nl()
 
-        c("t('...')"); t('is short named method: TextBuilder.text("text") to insert plain text');nl()
-        c("c('...')"); t('is short named method: TextBuilder.code("text") to highlight code in text');nl()
+        c("t('...')"); t('is a short named method TextBuilder.text("text") used to insert plain text');nl()
+        c("c('...')"); t('is a short named method TextBuilder.code("text") used to highlight code in text');nl()
         c("nl()"); t('new line');nl()
-        c("div()"); t('to inject into post as div');nl()
-        c("para()"); t('to inject into post as paragraph');nl()
+        c("div()"); t('to inject as div');nl()
+        c("para()"); t('to inject as paragraph');nl()
 
         t('TextBuilder is the most used class.'); nl()
         t('Short methods make text content readable.')
@@ -87,7 +87,7 @@ class Page_1 extends PageContent{
                                         'https://github.com/DaniloBabovic/SiteGenJS'
                                     )
         post.addText('Hello world!')
-        post.addText('<br><br>Code for this component is presented in post below.')
+        post.addText('<br><br>Code for this component is presented in the post below.')
     }
 
     post_1_explain() {
@@ -111,7 +111,7 @@ class Page_1 extends PageContent{
                         'https://github.com/DaniloBabovic/SiteGenJS'
                     )
     post.addText('Hello world!')
-    post.addText('<br><br>Code for this component is presented in post below.')`
+    post.addText('<br><br>Code for this component is presented in the post below.')`
 
         code.add(code_txt)
         var txt = code.getText()
@@ -119,7 +119,7 @@ class Page_1 extends PageContent{
 
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
 
-        t('Header in this kind of post is link as well.'); nl()
+        t('Header in this kind of post is a link as well.'); nl()
         c(".setPostInfo(infoText = 'infoText', dateString = '', autor = '', autorLink = '')")
         t('has optional parameters except infoText.'); nl()
         t('You can write HTML in every type of post, like')
@@ -141,9 +141,9 @@ class Page_1 extends PageContent{
                                             70 )
 
         let text = `<p style="color: #424242; margin-top: 20px;">
-            This is page is saved in the page_1.js file.<br>
-            Code for this image and text are in this.post_2() method.
-            Code for this component is presented in post below.
+            This page is saved in the page_1.js file.<br>
+            Code for this image and text is in this.post_2() method.
+            Code for this component is presented in the post below.
         </p>`
 
         imgAndTxt.text(text)
@@ -172,9 +172,9 @@ class Page_1 extends PageContent{
                                         70 )
 
     let text = '<p style="color: #424242; margin-top: 20px;">
-        This is page is saved in the page_1.js file.<br>
-        Code for this image and text are in this.post_2() method.
-        Code for this component is presented in post below.
+        This page is saved in the page_1.js file.<br>
+        Code for this image and text is in this.post_2() method.
+        Code for this component is presented in the post below.
     </p>'
 
     imgAndTxt.text(text)
@@ -187,9 +187,9 @@ class Page_1 extends PageContent{
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
 
         c('ImageAndText');
-        t('class purpose is to make HTML for component above.')
+        t('class purpose is to make HTML for the component above.')
         c('left')
-        t('parameter is side for image.')
+        t('parameter is the side for the image.')
         c('PostBase()')
         t('is the simplest post in the Site Gen JS.')
         post.addText(para())
@@ -202,8 +202,8 @@ class Page_1 extends PageContent{
         let {t, l, c, nl, div, para} = new TextBuilder().allMethods()
 
         t('Take a look at page_1.js'); nl()
-        t('That file contain this page.'); nl()
-        t('This will be enough for start to write your site.'); nl(); nl()
+        t('That file contains this page.'); nl()
+        t('This will be enough for start to make your site.'); nl(); nl()
         t('Happy coding!')
         post.addText(para())
     }

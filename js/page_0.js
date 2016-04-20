@@ -26,9 +26,9 @@ class Page_0 extends PageContent{
                                             "Some Image",
                                             70 )
 
-        let text = `<p style="color: #424242; margin-top: 20px;">
-            This is code for header and title above. That simple!<br>
-            To create your blog, small site or documentation, download this site and overwrite content.
+        let text = `<p style="color: #424242; margin-top: 0px;">
+            This is code for the header and the title above. That simple!<br>
+            To create your blog, a small site or documentation, download this site and overwrite the content.
         </p>`
 
         imgAndTxt.text(text)
@@ -40,11 +40,11 @@ class Page_0 extends PageContent{
         let threePost =  this.page.makePostThreeColums('Edit anywhere', 'Run anywhere', 'Save anywhere')
 
         let text_builder_1 = threePost.getTextBuilderOne()
-        let txt_1 = 'Browser and text editor are all that you need to create site like this'
+        let txt_1 = 'A browser and a text editor are all that you need to create a site like this'
         text_builder_1.text(txt_1)
 
         let text_builder_2 = threePost.getTextBuilderTwo()
-        let txt_2 = 'No server needed! <br>You can run this site from file or form any Web server.'
+        let txt_2 = 'No server needed! <br>You can run this site from file or from any Web server.'
         text_builder_2.text(txt_2)
 
         let text_builder_3 = threePost.getTextBuilderThree()
@@ -64,11 +64,11 @@ class Page_0 extends PageContent{
             nl: .newLine(); div: .getText(); para: .getTextAsParagraph()
         */
 
-        t('I was searching for good looking static site generator for quite some time.')
+        t('I was searching for a good looking static site generator for quite some time.')
         l('Jekyll', 'https://jekyllrb.com')
-        t('static site generator was a most impressive for me.')
+        t('static site generator is most impressive for me.')
         c("css/screen.css")
-        t(' style is Jekyll work with little modification. (MIT licence)')
+        t(` style is Jekyll's work with small modifications. (MIT licence)`)
         nl()
 
         t('This beautiful and readable fonts: ')
@@ -79,20 +79,20 @@ class Page_0 extends PageContent{
         nl()
         nl()
 
-        t("You don't need write style or components. Use existing one and take care about your content.")
+        t("You don't need to create style or components. Use the existing one and focus on your content.")
 
         stye_post.addText(para())
     }
 
     post_3() {
 
-        let cnsPost = this.page.makePostFancyCode(   "Fancy components",
+        let post = this.page.makePostFancyCode(   "Fancy components",
                                                 "Boring console looking great")
-        cnsPost.addLine('~', '$', 'gem install jekyll')
-        cnsPost.addLine('~', '$', 'jekyll new my-awesome-site')
-        cnsPost.addLine('~', '$', 'cd my-awesome-site')
-        cnsPost.addComment('# This is example')
-        cnsPost.addComment("# Site Gen JS don't use console at all")
+        post.addLine('~', '$', 'gem install jekyll')
+        post.addLine('~', '$', 'jekyll new my-awesome-site')
+        post.addLine('~', '$', 'cd my-awesome-site')
+        post.addComment('# This is an example')
+        post.addComment("# Site Gen JS doesn't use console at all")
     }
 
     post_4() {
@@ -110,7 +110,7 @@ class Page_0 extends PageContent{
         t.link('Rainbow', 'https://github.com/ccampbell/rainbow')
         t.text('syntax highlighter is embedded in Site Gen JS.')
         t.newLine()
-        t.text('Code for fancy component above:')
+        t.text('Code for the fancy component above:')
 
         post.addText('<p>' + t.getText() + '</p>')
 
@@ -122,8 +122,8 @@ class Page_0 extends PageContent{
     post.addLine('~', "$", 'gem install jekyll')
     post.addLine('~', "$", 'jekyll new my-awesome-site')
     post.addLine('~', "$", 'cd my-awesome-site')
-    post.addComment('# This is example')
-    post.addComment("# Site Gen JS don't use console at all")
+    post.addComment('# This is an example')
+    post.addComment("# Site Gen JS doesn't use console at all")
 }
 fancyComponent()`
 
@@ -161,7 +161,7 @@ fancyComponent()`
         c('cnsPost.addCodeLine')
         t(`class`)
         c('Code')
-        t(`are used for manual code highlighting. You can skip to next color parameter with`)
+        t(`is used for manual code highlighting. You can skip to next color parameter with`)
         c(`'',`)
         nl()
 
@@ -181,13 +181,13 @@ fancyComponent()`
         let tb = new TextBuilder()
         let {t, l, c, nl, div, para} = tb.allMethods()
 
-        t('All content in this page are saved in')
+        t('All content in this page is saved in')
         c("main.js"); t('and'); c("page_0.js");
         t('files.')
-        t('There is no need for css, html or any markup language. Existing css is great, take care about your content.')
+        t('There is no need for CSS, HTML or any other markup language. The existing CSS is great, focus on your content.')
         nl()
-        t('No: database, npm, Angular, JQuery, node.js, Babel, Browserify, Promise, back end ...')
-        t('All components gets data dynamicaly and self inject as ')
+        t('No database, npm, Angular, JQuery, node.js, Babel, Browserify, Promise, back end ...')
+        t('All components get data dynamically and self inject as ')
         c('&lt;section&gt;...&lt;/section&gt;')
         t('into page body element using client processor.'); nl()
         t('With basic ECMAScript 6 knowledge, there is no learning curve.')
@@ -215,8 +215,6 @@ fancyComponent()`
         let tb = new TextBuilder()
         let {t, l, c, nl, div, para} = tb.allMethods()
 
-        t('... and more.')
-        nl()
         l("SiteGenJS", "https://github.com/DaniloBabovic/SiteGenJS")
         t('is open and')
         l('MIT.', 'https://opensource.org/licenses/MIT')
@@ -224,7 +222,7 @@ fancyComponent()`
         nl()
         t('For start, you can')
         l("download", "https://github.com/DaniloBabovic/SiteGenJS")
-        t('and replace content of this page with your content.')
+        t('and replace the content of this page with your content.')
         post.addText(para())
     }
 }
