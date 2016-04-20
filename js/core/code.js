@@ -70,24 +70,9 @@ class Code {
         this.texts = []
     }
 
-    add_(codeText_) {
-
-        this.texts.push(codeText_)
-    }
-
     add(codeText) {
 
-        var fun_ = (codeText_) => (this.add_(codeText_))
-        Rainbow.color(
-                        codeText,
-                        'javascript',
-                        function(highlighted_code)
-                        {
-                            fun_(highlighted_code)
-                            //console.log(highlighted_code);
-                        }
-                    );
-        //this.texts.push(codeText)
+        this.texts.push(codeText)
     }
 
     getText() {

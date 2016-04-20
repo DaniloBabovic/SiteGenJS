@@ -14,7 +14,6 @@ class Footer {
         this.logoHeight = siteGen.header.logoHeight
 
         this.links = ''
-
     }
 
     makefooterBody()
@@ -86,6 +85,7 @@ class Footer {
     onPageClick(pageName)
     {
         siteGen.pageChanged(pageName)
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 
     updateSelected(newPageIndex) {

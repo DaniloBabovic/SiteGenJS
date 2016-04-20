@@ -124,5 +124,6 @@ class SiteGen {
 
         this.header.updateSelected(this.currentPageIndex)
         this.footer.updateSelected(this.currentPageIndex)
+        Rainbow.color();
     }
 }
